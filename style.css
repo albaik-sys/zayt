@@ -1411,3 +1411,59 @@ img { max-width: 100%; height: auto; display: block; }
         border-radius: 4px !important;
     }
 }
+
+/* ==========================================================================
+   الزيتون V2: تصفير هيدر الرئيسية بالكامل + هندسة الزر الطائر الذكي للجوال
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* فرض الإخفاء المطلق لكل ما هو فوق شريط التنويه بالصفحة الرئيسية */
+    .royal-layout div[style*="margin-bottom: 40px"] > div:first-child,
+    .royal-hero-section > div:first-child,
+    .hero-sidebar-news,
+    div[style*="background-color: #115c38"],
+    .top-header, .upper-bar, 
+    header, .main-navigation, 
+    .royal-menu-btn,
+    div[style*="background: #115c38"] {
+        display: none !important;
+    }
+    
+    /* ضبط الحاويات لتبدأ من الصفر المطلق */
+    .container.home-layout, .royal-layout, body {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    /* هندسة وتثبيت الزر الطائر الذكي يمين الشاشة بالأسفل */
+    .v2-floating-app-menu {
+        display: flex !important;
+        position: fixed !important;
+        bottom: 25px !important;
+        right: 20px !important;
+        width: 50px !important;
+        height: 50px !important;
+        background: linear-gradient(135deg, #115c38 0%, #0b3d25 100%) !important;
+        border: 2px solid #d4af37 !important;
+        border-radius: 50% !important;
+        color: #fff !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 18px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+        z-index: 999999 !important;
+        cursor: pointer !important;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    }
+    
+    .v2-floating-app-menu:active {
+        transform: scale(0.9) rotate(90deg) !important;
+    }
+}
+
+/* إخفاء الزر الطائر تماماً على أجهزة الكمبيوتر والديسكتوب */
+@media (min-width: 769px) {
+    .v2-floating-app-menu {
+        display: none !important;
+    }
+}

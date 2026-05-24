@@ -201,3 +201,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+<?php
+// حقن الزر الطائر الذكي المخصص للجوال
+?>
+<div class="v2-floating-app-menu" onclick="if(typeof toggleMobileMenu === 'function'){ toggleMobileMenu(); } else { alert('القائمة الرسمية للتطبيق جاهزة للربط!'); }">
+    <i class="fas fa-bars"></i>
+</div>
