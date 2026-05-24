@@ -1373,3 +1373,41 @@ img { max-width: 100%; height: auto; display: block; }
         padding-top: 8px !important;
     }
 }
+
+/* ==========================================================================
+   الزيتون V2: تحويل الواجهة لمظهر تطبيق جوال مدمج (Mobile App View)
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. إخفاء الشريط العلوي الأخضر (التاريخ، السوشيال ميديا، والديوان الإلكتروني) */
+    .top-header, .upper-bar, [class*="top-bar"], .official-container.royal-layout > style + div {
+        display: none !important;
+    }
+    
+    /* 2. إخفاء منطقة اللوجو وشجرة الزيتون الكبيرة */
+    .main-header, .logo-container, .header-branding, header .container {
+        display: none !important;
+    }
+    
+    /* 3. إخفاء أزرار (تقديم مناشدة) و (الإبلاغ عن مفقود) الكبيرة المزدحمة في الأعلى */
+    .four-royal-portals, .top-action-buttons, header + .container .portals-wrapper {
+        display: none !important;
+    }
+    
+    /* 4. إخفاء زر "قائمة الشبكة الرسمية" الأخضر العريض */
+    .main-navigation, .royal-menu-btn, #mobile-menu-trigger, .nav-container {
+        display: none !important;
+    }
+    
+    /* 5. إزالة الفراغات العلوية الزائدة لتبدأ الشاشة فوراً من شريط التنويه */
+    body, .site-content, .v2-help-archive-container, .v2-list-cinema-container {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* تثبيت وتأمين شريط التنويه العاجل ليكون أول شيء يراه مستخدم التطبيق */
+    .ticker-wrap, .alert-marquee-container {
+        margin-top: 10px !important;
+        border-radius: 4px !important;
+    }
+}
